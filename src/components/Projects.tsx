@@ -2,7 +2,7 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
     {
-        title: "XR-Potato",
+        title: "XR-Potato - Divhacks (Win) 2025",
         description: "XRPotato is a decentralized platform for publishing research papers, enabling users to directly pay authors per paper using the XRP Ledger for transparent, low-fee transactions.",
         tech: ["React", "Node.js", "Blockchain", "PostgreSQL"],
         link: "https://xrpotato.nyc/",
@@ -15,18 +15,18 @@ const projects = [
         github: "https://github.com/WiamSkakri/WoundWatch",
     },
     {
-        title: "Portfolio Builder",
-        description: "No-code solution for creatives to build stunning portfolio websites.",
-        tech: ["React", "Firebase", "Framer Motion"],
-        link: "#",
-        github: "#",
+        title: "Sustainify - HackPrinceton Spring 2025",
+        description: "Sustainify is a platform that helps individuals and organizations track, reduce, and offset their environmental impact through data-driven insights and actionable sustainability goals.",
+        tech: ["HTML", "CSS", "JavaScript", "Python"],
+
+        github: "https://github.com/WiamSkakri/Sustainify",
     },
     {
-        title: "Analytics Dashboard",
-        description: "Real-time data visualization for business metrics and KPIs.",
+        title: "Mutual Fund Calculator - Goldman Sachs ELS",
+        description: "",
         tech: ["Vue.js", "D3.js", "Express", "MongoDB"],
-        link: "#",
-        github: "#",
+
+        github: "https://github.com/WiamSkakri/Mutual-Fund-Calculator",
     },
 ];
 
