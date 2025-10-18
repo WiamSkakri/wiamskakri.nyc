@@ -2,18 +2,17 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
     {
-        title: "E-Commerce Platform",
-        description: "Modern shopping experience with real-time inventory and seamless checkout.",
-        tech: ["React", "Node.js", "Stripe", "PostgreSQL"],
-        link: "#",
-        github: "#",
+        title: "XR-Potato",
+        description: "XRPotato is a decentralized platform for publishing research papers, enabling users to directly pay authors per paper using the XRP Ledger for transparent, low-fee transactions.",
+        tech: ["React", "Node.js", "Blockchain", "PostgreSQL"],
+        link: "https://xrpotato.nyc/",
+        github: "https://github.com/WiamSkakri/XRPotato",
     },
     {
-        title: "Task Management App",
-        description: "Collaborative workspace with real-time updates and team analytics.",
-        tech: ["TypeScript", "Next.js", "Prisma", "TailwindCSS"],
-        link: "#",
-        github: "#",
+        title: "WoundWatch",
+        description: "An AI-powered web application that helps assess wound images for infection.",
+        tech: ["Python", "ML", "Prediction Models", "Grad-CAM"],
+        github: "https://github.com/WiamSkakri/WoundWatch",
     },
     {
         title: "Portfolio Builder",
