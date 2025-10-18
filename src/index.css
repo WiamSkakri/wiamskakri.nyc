@@ -1,68 +1,115 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 0 0% 0%;
+
+        --card: 0 0% 98%;
+        --card-foreground: 0 0% 0%;
+
+        --popover: 0 0% 100%;
+        --popover-foreground: 0 0% 0%;
+
+        --primary: 0 0% 0%;
+        --primary-foreground: 0 0% 100%;
+
+        --secondary: 0 0% 95%;
+        --secondary-foreground: 0 0% 0%;
+
+        --muted: 0 0% 90%;
+        --muted-foreground: 0 0% 40%;
+
+        --accent: 35 45% 55%;
+        --accent-foreground: 0 0% 100%;
+
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 100%;
+
+        --border: 0 0% 85%;
+        --input: 0 0% 85%;
+        --ring: 35 45% 55%;
+
+        --radius: 0.5rem;
+
+        /* Custom portfolio tokens */
+        --glow-orange: 35 45% 55%;
+        --gradient-warm: linear-gradient(135deg, hsl(280, 70%, 60%), hsl(320, 80%, 60%), hsl(25, 90%, 60%));
+        --gradient-warm-hover: linear-gradient(135deg, hsl(280, 75%, 65%), hsl(320, 85%, 65%), hsl(25, 95%, 65%));
+        --shadow-glow: 0 0 40px hsl(320 80% 60% / 0.4);
+        --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .dark {
+        --background: 0 0% 0%;
+        --foreground: 0 0% 100%;
+
+        --card: 0 0% 5%;
+        --card-foreground: 0 0% 100%;
+
+        --popover: 0 0% 5%;
+        --popover-foreground: 0 0% 100%;
+
+        --primary: 0 0% 100%;
+        --primary-foreground: 0 0% 0%;
+
+        --secondary: 0 0% 10%;
+        --secondary-foreground: 0 0% 100%;
+
+        --muted: 0 0% 15%;
+        --muted-foreground: 0 0% 60%;
+
+        --accent: 35 45% 55%;
+        --accent-foreground: 0 0% 0%;
+
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 0 0% 100%;
+
+        --border: 0 0% 20%;
+        --input: 0 0% 20%;
+        --ring: 35 45% 55%;
+    }
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+@layer base {
+    * {
+        @apply border-border;
+    }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
+    body {
+        @apply bg-background text-foreground;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
+    .gradient-text {
+        background: var(--gradient-warm);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
+    .gradient-bg {
+        background: var(--gradient-warm);
+    }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+    .gradient-bg-hover {
+        transition: var(--transition-smooth);
+    }
+
+    .gradient-bg-hover:hover {
+        background: var(--gradient-warm-hover);
+    }
+
+    .gradient-border {
+        position: relative;
+        border: 2px solid transparent;
+        background: linear-gradient(hsl(var(--background)), hsl(var(--background))) padding-box,
+            var(--gradient-warm) border-box;
+    }
 }
