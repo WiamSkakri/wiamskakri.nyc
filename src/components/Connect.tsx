@@ -42,7 +42,7 @@ const Connect = () => {
                 <div className="h-px w-32 mx-auto gradient-bg animate-glow-pulse" />
 
                 <p className="mt-12 text-muted-foreground">
-                    © 2025 Portfolio. Wiam Skakri..
+                    © 2025 Portfolio. Wiam Skakri. Living Legacy. Testing Limits.
                 </p>
             </div>
         </section>
