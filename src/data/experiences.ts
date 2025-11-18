@@ -13,12 +13,7 @@ export const experiences: Experience[] = [
         period: "2025 Summer",
         description: "Conducted cross-functional stakeholder interviews (C-suite to researchers) and competitive analysis to define ML product strategy for biomaterials startup with no existing AI capabilities.",
     },
-    {
-        title: "Software Engineer Intern - ELS",
-        company: "Goldman Sachs",
-        period: "2024 - 2025",
-        description: "Developed a mutual fund calculator to help clients understand the performance of their investments.",
-    },
+
     {
         title: "Program Manager",
         company: "ThinkImpact Fellowship, Case Western Reserve University",
