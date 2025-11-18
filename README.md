@@ -88,7 +88,7 @@ The output will be in the `dist/` directory.
 
 ## License
 
-This project is open source and available for reference. Feel free to use the code as inspiration for your own portfolio.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Contact
 

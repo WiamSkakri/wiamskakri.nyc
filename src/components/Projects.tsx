@@ -23,8 +23,8 @@ const projects = [
     },
     {
         title: "Mutual Fund Calculator - Goldman Sachs ELS",
-        description: "The mutual fund calculator developed with Goldman Sachs enables investors to model and compare potential returns by simulating contribution schedules, compounding, and market performance over time.",
-        tech: ["Vue.js", "D3.js", "Express", "MongoDB"],
+        description: "The Mutual Fund Calculator enables investors to model potential returns by simulating contribution schedules, compounding, and market performance over time.",
+        tech: ["Spring Boot", "Angular", "PostgreSQL", "REST API", "TypeScript"],
         link: "https://invigorating-enthusiasm-production.up.railway.app/home",
 
         github: "https://github.com/WiamSkakri/Mutual-Fund-Calculator",
