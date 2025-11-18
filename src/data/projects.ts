@@ -15,9 +15,10 @@ export const projects: Project[] = [
         github: "https://github.com/WiamSkakri/WoundWatch",
     },
     {
-        title: "Sustainify - HackPrinceton Spring 2025",
-        description: "Sustainify is a platform that helps individuals and organizations track, reduce, and offset their environmental impact through data-driven insights and actionable sustainability goals.",
-        tech: ["HTML", "CSS", "JavaScript", "Python"],
+        title: "EcoTrace - HackPrinceton Spring 2025",
+        description: "This is for HackPrinceton hackathonTrack your environmental impact, compete on global leaderboards, and get AI-powered sustainability advice. Features real-time carbon footprint monitoring, transaction-based eco-scoring via Knot API, interactive maps of sustainable places, and personalized recommendations from Google Gemini AI.",
+        tech: ["Next.js", "React", "TypeScript", "OpenAI API", "SQLite"],
+        link: "https://eco-trace-hack-princeton-hzh8.vercel.app/chat",
         github: "https://github.com/WiamSkakri/Sustainify",
     },
     {
