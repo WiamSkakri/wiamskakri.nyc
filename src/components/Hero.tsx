@@ -1,12 +1,5 @@
 import { ArrowDown } from "lucide-react";
-
-const navigationLinks = [
-    { label: "About", href: "#about" },
-    { label: "Experience", href: "#experience" },
-    { label: "Projects", href: "#projects" },
-    { label: "Fellowships", href: "#fellowships" },
-    { label: "Connect", href: "#connect" },
-];
+import { NAVIGATION_LINKS } from "@/constants";
 
 const Hero = () => {
     return (
@@ -19,7 +12,7 @@ const Hero = () => {
 
                 {/* Floating Navigation Circles in Horizontal Line */}
                 <div className="flex flex-wrap gap-4 justify-center pt-8">
-                    {navigationLinks.map((link, index) => (
+                    {NAVIGATION_LINKS.map((link, index) => (
                         <a
                             key={link.label}
                             href={link.href}
