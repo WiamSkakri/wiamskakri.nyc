@@ -2,6 +2,12 @@
 
 A modern, responsive portfolio website showcasing my work as a Product Manager and Software Engineer. Built with React, TypeScript, and Tailwind CSS, featuring a sleek dark/light theme and smooth animations.
 
+
+
+https://github.com/user-attachments/assets/2f3ace03-905c-484b-97ae-963337043dbe
+
+
+
 ## Features
 
 - **Responsive Design**: Fully optimized for desktop, tablet, and mobile devices
