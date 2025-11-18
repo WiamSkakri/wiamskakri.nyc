@@ -1,73 +1,97 @@
-# React + TypeScript + Vite
+# wiamskakri.nyc
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website showcasing my work as a Product Manager and Software Engineer. Built with React, TypeScript, and Tailwind CSS, featuring a sleek dark/light theme and smooth animations.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Responsive Design**: Fully optimized for desktop, tablet, and mobile devices
+- **Dark/Light Theme**: Toggle between dark and light modes with smooth transitions
+- **Modern UI**: Built with shadcn/ui components and Tailwind CSS
+- **Fast Performance**: Powered by Vite for lightning-fast builds and HMR
+- **Type-Safe**: Written in TypeScript for better development experience
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+- **Framework**: React 18
+- **Language**: TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn/ui (Radix UI primitives)
+- **Icons**: Lucide React
+- **Routing**: React Router
+- **Theme**: next-themes
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Node.js 18+
+- npm or yarn
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Installation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. Clone the repository:
+```bash
+git clone https://github.com/WiamSkakri/wiamskakri.nyc.git
+cd wiamskakri.nyc
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. Install dependencies:
+```bash
+npm install
 ```
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+The site will be available at `http://localhost:5173`
+
+## Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run build:dev` - Build in development mode
+- `npm run preview` - Preview production build locally
+- `npm run lint` - Run ESLint
+
+## Project Structure
+
+```
+src/
+├── components/       # React components
+│   ├── Hero.tsx     # Landing section
+│   ├── About.tsx    # About section
+│   ├── Projects.tsx # Projects showcase
+│   ├── Experience.tsx
+│   ├── Fellowships.tsx
+│   └── Connect.tsx  # Contact section
+├── lib/             # Utility functions
+└── main.tsx         # Application entry point
+```
+
+## Deployment
+
+The site is configured for static hosting and can be deployed to platforms like:
+- Vercel
+- Netlify
+- GitHub Pages
+- Any static hosting service
+
+Build the production bundle:
+```bash
+npm run build
+```
+
+The output will be in the `dist/` directory.
+
+## License
+
+This project is open source and available for reference. Feel free to use the code as inspiration for your own portfolio.
+
+## Contact
+
+Wiam Skakri - [wiamskakri.nyc](https://wiamskakri.nyc)
+
+Project Link: [https://github.com/WiamSkakri/wiamskakri.nyc](https://github.com/WiamSkakri/wiamskakri.nyc)
