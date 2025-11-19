@@ -7,6 +7,7 @@ export const projects: Project[] = [
         tech: ["React", "Node.js", "Blockchain", "PostgreSQL"],
         link: "https://xrpotato.nyc/",
         github: "https://github.com/WiamSkakri/XRPotato",
+        // Add your video file here
     },
     {
         title: "WoundWatch",
@@ -20,6 +21,7 @@ export const projects: Project[] = [
         tech: ["Next.js", "React", "TypeScript", "OpenAI API", "SQLite"],
         link: "https://eco-trace-hack-princeton-hzh8.vercel.app/chat",
         github: "https://github.com/WiamSkakri/Sustainify",
+        videoUrl: "/videos/Ecotrace-demo.mp4", // Add your video file here
     },
     {
         title: "Mutual Fund Calculator - Goldman Sachs ELS",
@@ -27,5 +29,6 @@ export const projects: Project[] = [
         tech: ["Spring Boot", "Angular", "PostgreSQL", "REST API", "TypeScript"],
         link: "https://invigorating-enthusiasm-production.up.railway.app/home",
         github: "https://github.com/WiamSkakri/Mutual-Fund-Calculator",
+        videoUrl: "/videos/GS-ELS-MFC.mp4",
     },
 ];

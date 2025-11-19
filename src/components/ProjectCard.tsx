@@ -1,14 +1,58 @@
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, Play } from "lucide-react";
 import { Project } from "../types/project";
+import { useRef, useState } from "react";
 
 interface ProjectCardProps {
     project: Project;
 }
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
+    const videoRef = useRef<HTMLVideoElement>(null);
+    const [isPlaying, setIsPlaying] = useState(false);
+
+    const handleMouseEnter = () => {
+        if (videoRef.current) {
+            videoRef.current.play();
+            setIsPlaying(true);
+        }
+    };
+
+    const handleMouseLeave = () => {
+        if (videoRef.current) {
+            videoRef.current.pause();
+            setIsPlaying(false);
+        }
+    };
+
     return (
         <div className="group border border-border p-6 hover:gradient-border transition-all duration-300 relative overflow-hidden">
             <div className="absolute top-0 left-0 w-0 h-1 gradient-bg group-hover:w-full transition-all duration-300" />
+
+            {project.videoUrl && (
+                <div
+                    className="mb-6 rounded overflow-hidden cursor-pointer relative"
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                >
+                    <video
+                        ref={videoRef}
+                        className="w-full aspect-video object-cover"
+                        muted
+                        loop
+                        preload="metadata"
+                    >
+                        <source src={project.videoUrl} type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                    {!isPlaying && (
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/20 transition-opacity">
+                            <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-lg">
+                                <Play size={32} className="text-black ml-1" fill="black" />
+                            </div>
+                        </div>
+                    )}
+                </div>
+            )}
 
             <h3 className="text-2xl font-semibold mb-3">{project.title}</h3>
             <p className="text-muted-foreground mb-6 leading-relaxed">
